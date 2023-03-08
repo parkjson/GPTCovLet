@@ -1,9 +1,0 @@
-#openai == ? pip installation https://github.com/openai/openai-python
-#venv == ?
-#selenium == ?
-#beautifulsoup4 == 4?
-#webdriver manager == ? 
-#pylint == ?
-#black == ?
-#pytest == 7.2.2
-#pytest-cov == ?
