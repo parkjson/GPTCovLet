@@ -7,7 +7,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-#pytest main.py --cov
+
+# pytest main.py --cov
+
 
 def urlScrape(url):
     options = Options()
@@ -31,11 +33,14 @@ def urlScrape(url):
 
     return descScrape(html)
 
+
 def descScrape(html):
     # print(html.prettify())
     company_name_html = html.find_all("a", {"class": "ember-view t-black t-normal"})
     # company_name_html = html.find_all('div', {'class': 'jobs-unified-top-card__primary-description'})
-    company_name = (company_name_html[0].text).strip() #if there is an error here it means you need to input your linkedin user email and password in the urlScrape Function
+    company_name = (
+        company_name_html[0].text
+    ).strip()  # if there is an error here it means you need to input your linkedin user email and password in the urlScrape Function
 
     # print(company_name)
     return company_name
@@ -61,9 +66,5 @@ def completionQuery(desc):
     return True
 
 
-
-
 url = "https://www.linkedin.com/jobs/view/dev10-entry-level-software-developer-nationwide-at-dev10-3497504875/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
-#urlScrape(url)
-
-
+# urlScrape(url)

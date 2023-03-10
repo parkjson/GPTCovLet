@@ -1,7 +1,8 @@
 from unittest.mock import patch
 import sys, os
+
 sys.path.append(os.path.abspath(".."))
-#print(sys.path)
+# print(sys.path)
 
 import scrapeToGPT
 
@@ -26,8 +27,6 @@ def test_integration():
 # def completionQuery Test (insert without coverLetter)
 
 url = "https://www.linkedin.com/jobs/view/dev10-entry-level-software-developer-nationwide-at-dev10-3497504875/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
-#scrapeToGPT.urlScrape(url)
-#test_descScrape() #current scrapes company name
+# scrapeToGPT.urlScrape(url)
+# test_descScrape() #current scrapes company name
 test_integration()
-
-
