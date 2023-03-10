@@ -21,6 +21,9 @@ format:  ## run autoformatting with black
 	python -m black GPT_Cov_Let/ setup.py
 fix: format
 
+check:  ## check assets for packaging
+	check-manifest -v
+checks: check
 
 
 #testing
