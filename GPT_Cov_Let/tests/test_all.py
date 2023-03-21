@@ -27,6 +27,6 @@ def test_integration():
 # def completionQuery Test (insert without coverLetter)
 
 url = "https://www.linkedin.com/jobs/view/dev10-entry-level-software-developer-nationwide-at-dev10-3497504875/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
-# scrapeToGPT.urlScrape(url)
-# test_descScrape() #current scrapes company name
-test_integration()
+#scrapeToGPT.urlScrape(url) #ALSO CANNOT TEST THIS BC REQUIRES GITHUB SECRETS
+test_descScrape() #current scrapes company name
+#test_integration() #CANNOT TEST THIS BC REQUIRES GITHUB SECRETS
