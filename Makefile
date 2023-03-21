@@ -34,4 +34,3 @@ tests: test
 
 coverage:  ## clean and run unit tests with coverage
 	python -m pytest -v GPT_Cov_Let/tests --cov=GPT_Cov_Let --cov-branch --cov-fail-under=75 --cov-report term-missing
-
