@@ -1,11 +1,12 @@
 from unittest.mock import patch
 import sys, os
 import os.path
-#__file__
-#os.path.join(os.path.dirname(__file__), "staticPageUnitTest.html")
+
+# __file__
+# os.path.join(os.path.dirname(__file__), "staticPageUnitTest.html")
 sys.path.append(os.path.abspath("../.."))
-#print(os.path)
-#print(sys.path)
+# print(os.path)
+# print(sys.path)
 from bs4 import BeautifulSoup
 
 from GPT_Cov_Let import scrapeToGPT
@@ -21,17 +22,18 @@ def test_descScrape():
 
     return
 
-'''
+
+"""
 def test_integration():
     url = "https://www.linkedin.com/jobs/view/software-test-engineer-entry-level-at-rtts-3470060740/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
     description = scrapeToGPT.urlScrape(url)
     assert scrapeToGPT.completionQuery(description), True
 
-'''
+"""
 
 # def completionQuery Test (insert without coverLetter)
 
 url = "https://www.linkedin.com/jobs/view/dev10-entry-level-software-developer-nationwide-at-dev10-3497504875/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
-#scrapeToGPT.urlScrape(url) #ALSO CANNOT TEST THIS BC REQUIRES GITHUB SECRETS
-test_descScrape() #current scrapes company name
-#test_integration() #CANNOT TEST THIS BC REQUIRES GITHUB SECRETS
+# scrapeToGPT.urlScrape(url) #ALSO CANNOT TEST THIS BC REQUIRES GITHUB SECRETS
+test_descScrape()  # current scrapes company name
+# test_integration() #CANNOT TEST THIS BC REQUIRES GITHUB SECRETS
