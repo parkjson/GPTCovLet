@@ -22,6 +22,7 @@ develop = [
 	"pytest>=7.2.2",
 	"check-manifest",
 	"wheel",
+	"pytest-cov,"
 ]
 
 [tool.pytest.ini_options]
