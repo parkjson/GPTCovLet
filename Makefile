@@ -33,6 +33,6 @@ test: ## clean and run unit tests #pytest main.py --cov
 tests: test
 
 coverage:  ## clean and run unit tests with coverage
-	python -m pytest -v GPT_Cov_Let/tests --cov-fail-under=50
+	python -m pytest -v --cov-fail-under=50  GPT_Cov_Let/tests
 
 ## error: unrecognized arguments: --cov=GPT_Cov_Let --cov-branch --cov-fail-under=50 --cov-report term-missing
