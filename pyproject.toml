@@ -15,6 +15,7 @@ dependencies = [
 	"openai",
 	"selenium",
 	"bs4",
+	"webdriver-manager",
 ]
 [project.optional-dependencies]
 develop = [
