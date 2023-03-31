@@ -1,9 +1,7 @@
 # GPTCovLet
 This takes in a job posting and some personal details then uses chatGPT to produce a human-like cover letter.
 
-![](https://img.shields.io/badge/license-MIT-blue)
-
-![Build Status](https://github.com/jaesungpark42/GPTCovLet/actions/workflows/Build%20Status/badge.svg?branch=main)
+![Build Status](https://github.com/jaesungpark42/GPTCovLet/actions/workflows/build.yml/badge.svg)
 
 [![codecov](https://codecov.io/gh/jaesungpark42/GPTCovLet/branch/main/graph/badge.svg?token=X5BN0AAOZ1)](https://codecov.io/gh/jaesungpark42/GPTCovLet)
 
