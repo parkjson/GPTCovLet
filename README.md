@@ -1,7 +1,7 @@
 # GPTCovLet
-![PyPI](https://img.shields.io/pypi/v/GPTCovLet)
-
 This takes in a job posting and some personal details then uses chatGPT to produce a human-like cover letter.
+
+![PyPI](https://img.shields.io/pypi/v/GPTCovLet)
 
 ![Build Status](https://github.com/jaesungpark42/GPTCovLet/actions/workflows/build.yml/badge.svg)
 
