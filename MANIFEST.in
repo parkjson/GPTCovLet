@@ -3,6 +3,7 @@ graft GPT_Cov_Let
 include LICENSE
 include README.md
 
+include setup.py
 include bumpversion.cfg
 include .bumpversion.cfg
 include pyproject.toml
