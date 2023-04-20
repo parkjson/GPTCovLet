@@ -10,8 +10,21 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # pytest main.py --cov
 
+"""
+scrapeToGPT.py
+====================================
+The core module of my cover letter generation project
+"""
 
 def urlScrape(url):
+    """
+    Boots up a chrome browser window and logs in. With your credentials.
+
+    Parameters
+    ----------
+    url
+        Your typical www.linkin.com/... url of a typical job post. It needs your linkedin username and password.
+    """
     options = Options()
     options.add_argument("start-maximized")
     driver = webdriver.Chrome(
@@ -35,6 +48,14 @@ def urlScrape(url):
 
 
 def descScrape(html):
+    """
+    Webscrapes the html description of the LinkedIn url of a job posting. 
+
+    Parameters
+    ----------
+    html
+        The html scraped from the urlScrape function automatically goes here.
+    """
     # print(html.prettify())
     company_name_html = html.find_all("a", {"class": "ember-view t-black t-normal"})
     # company_name_html = html.find_all('div', {'class': 'jobs-unified-top-card__primary-description'})
@@ -50,6 +71,14 @@ def descScrape(html):
 
 
 def completionQuery(desc):
+    """
+    Takes the description and combines it with a preset query to send to openAI.
+
+    Parameters
+    ----------
+    desc
+        Description from the html of descScrape is automatically put in here. You must also enter your openAI api key.
+    """
     openai.api_key = ""
 
     # pull templateCoverLetterHere
