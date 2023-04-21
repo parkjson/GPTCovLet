@@ -13,3 +13,7 @@ It's unreasonable for companies to mandate a cover letter when you are applying 
 
 # Quickstart
 pip install GPTCovLet
+
+![Docs](https://readthedocs.org/projects/GPTCovLet/badge/?version=<version>&style=<style>A)
+Documentation:
+https://jaesungpark42.github.io/GPTCovLetDocs/
