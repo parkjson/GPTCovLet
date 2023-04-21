@@ -16,6 +16,7 @@ scrapeToGPT.py
 The core module of my cover letter generation project
 """
 
+
 def urlScrape(url):
     """
     Boots up a chrome browser window and logs in. With your credentials.
@@ -49,7 +50,7 @@ def urlScrape(url):
 
 def descScrape(html):
     """
-    Webscrapes the html description of the LinkedIn url of a job posting. 
+    Webscrapes the html description of the LinkedIn url of a job posting.
 
     Parameters
     ----------
