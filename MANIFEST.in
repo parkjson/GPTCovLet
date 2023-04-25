@@ -31,3 +31,7 @@ recursive-include build *.js
 recursive-include build *.py
 recursive-include build *.swp
 
+recursive-include docs *.bat
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs Makefile
