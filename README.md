@@ -14,7 +14,7 @@ It's unreasonable for companies to mandate a cover letter when you are applying 
 # Quickstart
 
 pip install GPTCovLet
-(Alter login, "desc", and openAI Key before proceeding)
+(Alter login, "desc", and openAI_key, update url with LinkedIn URL, and uncomment completionQuery(url) before proceeding)
 python3 GPT_Cov_Let/scrapeToGPT.py
 
 Video Demonstration in Documentation

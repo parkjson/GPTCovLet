@@ -103,5 +103,5 @@ def completionQuery(desc):
 
 
 url = "https://www.linkedin.com/jobs/view/jr-mid-level-software-engineer-roku-remote-at-tandym-group-3555277192/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
-completionQuery(urlScrape(url))
+# completionQuery(urlScrape(url))
 # print(urlScrape(url))
