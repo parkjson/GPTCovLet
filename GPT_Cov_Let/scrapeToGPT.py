@@ -35,7 +35,7 @@ def urlScrape(url):
     driver.get("https://www.linkedin.com/login")
     time.sleep(2)
     username = driver.find_element(By.ID, "username")
-    username.send_keys("jaesungpark271@gmail.com")
+    username.send_keys("")
     pword = driver.find_element(By.ID, "password")
     pword.send_keys("")
     driver.find_element(By.XPATH, "//button[@type='submit']").click()
@@ -59,13 +59,17 @@ def descScrape(html):
     """
     # print(html.prettify())
     company_name_html = html.find_all("a", {"class": "ember-view t-black t-normal"})
-    # company_name_html = html.find_all('div', {'class': 'jobs-unified-top-card__primary-description'})
     company_name = (
         company_name_html[0].text
     ).strip()  # if there is an error here it means you need to input your linkedin user email and password in the urlScrape Function
 
-    # print(company_name)
-    return company_name
+    company_desc_html = html.find_all("div", {"class": "jobs-description"})
+
+    company_desc = (company_desc_html[0].text).strip()
+    # print(company_desc)
+
+    info = company_name + ". Here is the relevant job description. " + company_desc
+    return info
 
 
 # def pull templateCoverLetter or Prompt():
@@ -85,16 +89,19 @@ def completionQuery(desc):
     # pull templateCoverLetterHere
     # cap completion to 10tokens
     prompt = (
-        "Write a three paragraph cover letter for the position of software developer to "
+        "Write a genuine and human three paragraph cover letter for the position of software developer to the company "
         + desc
-        + " as a soon to be graduate in major of computer science at Columbia University."
+        + ". I have an interest in the company's mission, which you should explicitly find out. Align with key facts about me below. I'm a recent graduate of Columbia University who studied computer science. Additional key facts to include are: 1: I have experience in open source development, both maintaining and contributing to GitHub projects. This has brought me up to the industry's best practices. 2: My previous internship in a startup has trained me to learn and adapt quickly. 3: During my personal project in cofounding a logistics centralization app for my university, I have learned to work alongside colleagues, both technical and laypersons. Sign off with the name \"Jaesung Park\"."
     )
-    print("Would be Prompt: Costs Tokens")
+    print("Prompt:")
     print(prompt)
-    # completion = openai.Completion.create(model="text-davinci-003", prompt, max_tokens = 750)
-    # print(completion.choices[0].text)
+    completion = openai.Completion.create(
+        model="text-davinci-003", prompt=prompt, max_tokens=1500, temperature=0.6
+    )
+    print(completion.choices[0].text)
     return True
 
 
-url = "https://www.linkedin.com/jobs/view/dev10-entry-level-software-developer-nationwide-at-dev10-3497504875/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
-# urlScrape(url)
+url = "https://www.linkedin.com/jobs/view/jr-mid-level-software-engineer-roku-remote-at-tandym-group-3555277192/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+completionQuery(urlScrape(url))
+# print(urlScrape(url))
