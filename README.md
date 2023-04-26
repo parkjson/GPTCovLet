@@ -10,7 +10,7 @@ This takes in a job posting and some personal details then uses chatGPT to produ
 
 # Overview
 
-It's unreasonable for companies to mandate a cover letter when you are applying to many different ones. So this is to help streamline that process.
+Streamline the process of writing cover letters by matching your resume with the job posting description.
 
 
 # Quickstart
