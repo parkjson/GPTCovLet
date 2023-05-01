@@ -1,7 +1,5 @@
 # GPTCovLet
 
-This takes in a job posting and some personal details then uses chatGPT to produce a human-like cover letter.
-
 ![PyPI](https://img.shields.io/pypi/v/GPTCovLet)
 
 ![Build Status](https://github.com/jaesungpark42/GPTCovLet/actions/workflows/build.yml/badge.svg)
@@ -10,8 +8,7 @@ This takes in a job posting and some personal details then uses chatGPT to produ
 
 # Overview
 
-Streamline the process of writing cover letters by matching your resume with the job posting description.
-
+Takes a job posting URL and your resume to generate a cover letter using OpenAI API.
 
 # Quickstart
 
