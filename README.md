@@ -1,5 +1,7 @@
 # GPTCovLet
 
+![License](https://img.shields.io/github/license/jaesungpark42/GPTCovLet)
+
 ![PyPI](https://img.shields.io/pypi/v/GPTCovLet)
 
 ![Build Status](https://github.com/jaesungpark42/GPTCovLet/actions/workflows/build.yml/badge.svg)
